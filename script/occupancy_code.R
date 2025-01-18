@@ -63,11 +63,9 @@ stemp <- as.matrix(df[c("stemp_j1", "stemp_j2", "stemp_j3")])
 interval <- as.matrix(df[c("int1", "int2", "int3")])
 elionurus <- as.factor(df[, "elionurus"])
 t_veg.orig <- df[,"t_veg"]
-dung.orig <- df[,"dung"]
 grass_suit.orig <- df[,"grass_suit"]
 grass_non_suit.orig <- df[,"grass_non_suit"]
 t_grass.orig <- df[,"t_grass"]
-t_herbs.orig <- df[,"t_herbs"]
 shrubs.orig <- df[,"shrubs"]
 trees.orig <- df[,"trees"]
 comp.orig <- df[,"compaction"]
@@ -505,11 +503,12 @@ my_theme <- theme(
   panel.background = element_blank(),
   panel.grid.major = element_blank(), 
   panel.grid.minor = element_blank(),
+  legend.key.width = unit(3, 'cm'),
   panel.border = element_rect(colour = "black", fill = NA, linewidth = 1),
-  axis.text = element_text(size = 16),
-  axis.title = element_text(size = 18),
+  axis.text = element_text(size = 18),
+  axis.title = element_text(size = 20),
   legend.title = element_blank(), 
-  legend.text = element_text(size = 18),
+  legend.text = element_text(size = 20),
   legend.position = "bottom")
 
 fig_pred_grain <- ggplot(predicted_grain_df, aes(x = grain, y = mod.avg.pred,
