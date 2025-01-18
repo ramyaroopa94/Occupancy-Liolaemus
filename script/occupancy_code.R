@@ -589,7 +589,7 @@ ggsave(path = "figs/main",
 
 ## ----supplementary: summary graphs of site covariates----
 area_elionurus <- ggplot(df, aes(x = area, fill = elionurus)) + 
-  geom_bar(stat = "count",  alpha = 0.6) +
+  geom_bar(stat = "count",  alpha = 0.6, width = 0.8) +
   scale_fill_manual(values = c("1" = "blue",
                                "0" = "red"),  
                     labels = c("Elionurus sp. absent", "Elionurus sp. present")) +
